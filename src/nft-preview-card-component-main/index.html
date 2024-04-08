@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | NFT preview card component</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Source+Sans+3:wght@300&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind Colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#0d1b2c",
+            card: "#14273e",
+            accent: "#2efefe",
+            paragraph: "#8196b6",
+            highlight: "#fbfffe",
+          },
+          boxShadow: {
+            custom: "0px 18px 30px 20px rgba(11,23,42,255)",
+          },
+          fontFamily: {
+            outfit: ["Outfit", "sans-serif"],
+          },
+        },
+      },
+    };
+
+
+  </script>
+</head>
+
+<body class="bg-background font-outfit">
+  <div class="">
+    <div class="">
+      <img src="./images/image-equilibrium.jpg" alt="Equilibrium Image">
+      <h1 class="text-xl font-[500] text-highlight">Equilibrium #3429</h1>
+      <p class="text-paragraph font-[300]">Our Equilibrium promotes balance and calm.</p>
+      <span>
+        <span class="inline-flex gap-2">
+          <img src="./images/icon-ethereum.svg" alt="Equilibrium Icon" class="h-4 w-auto">
+          0.041ETH
+        </span>
+      </span>
+    </div>
+  </div>
+</body>
+
+</html>
