@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Source+Sans+3:wght@300&display=swap"
   rel="stylesheet" />
+<!-- Favicon -->
+<link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
 <!-- Tailwind Colors -->
 <script>
   tailwind.config = {
@@ -40,32 +42,61 @@
 <body class="bg-background font-outfit">
   <div class="flex justify-center items-center h-screen">
     <div class="shadow-custom p-6 flex justify-center flex-col max-w-[20rem] w-auto rounded-xl bg-card gap-5">
-      <img src="./images/image-equilibrium.jpg" alt="Equilibrium Image" class="rounded-lg">
-      <h1 class="text-xl font-[500] text-highlight">
+      <!-- Illustration -->
+      <div class="relative flex items-center justify-center cursor-pointer" onmouseover="on()" onmouseout="off()">
+        <div id="mask"
+          class="bg-accent w-full h-full absolute rounded-lg opacity-40 invisible transition-opacity ease-in-out duration-500">
+        </div>
+        <img src="./images/image-equilibrium.jpg" alt="Equilibrium Image" class="rounded-lg">
+        <div id="eye"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-0 invisible transition-opacity ease-in-out duration-500">
+          <img src="./images/icon-view.svg" alt="View Icon" class="w-10 h-auto">
+        </div>
+      </div>
+      <!-- Title -->
+      <h1
+        class="text-xl font-[500] text-highlight hover:text-accent cursor-pointer transition duration-300 ease-in-out">
         Equilibrium #3429
       </h1>
+      <!-- Description -->
       <p class="text-paragraph font-[300]">
         Our Equilibrium promotes balance and calm.
       </p>
+      <!-- Other Info -->
       <span class="flex justify-between border-b border-gray-700 pb-5">
-        <span class="inline-flex gap-2 text-accent font-medium text-sm items-center">
-          <img src="./images/icon-ethereum.svg" alt="Ethereum Icon" class="w-4 h-auto">
+        <div class="inline-flex gap-2 text-accent font-medium text-sm items-center">
+          <img src="./images/icon-ethereum.svg" alt="Ethereum Icon" class="w-2.5 h-auto">
           0.041ETH
-        </span>
+        </div>
         <span class="inline-flex justify-center items-center text-paragraph font-medium text-sm gap-2">
           <img src="./images/icon-clock.svg" alt="Clock Icon">
           3 days left
         </span>
       </span>
+      <!-- Footer -->
       <div class="text-sm font-[400] inline-flex items-center gap-3">
         <img src="./images/image-avatar.png" alt="Avatar" class="w-8 h-autp rounded-full border border-highlight">
         <span class="text-paragraph">Creation of
-          <span class="text-highlight"> Jules Myvern</span>
+          <span class="text-highlight hover:text-accent cursor-pointer transition duration-300 ease-in-out">Jules
+            Myvern</span>
         </span>
       </div>
     </div>
   </div>
+  <script>
+    const mask = document.getElementById("mask");
+    const eye = document.getElementById("eye");
 
+    function on() {
+      mask.classList.remove("opacity-0", "invisible");
+      eye.classList.remove("opacity-0", "invisible");
+    }
+
+    function off() {
+      mask.classList.add("opacity-0", "invisible");
+      eye.classList.add("opacity-0", "invisible");
+    }
+  </script>
 </body>
 
 </html>
