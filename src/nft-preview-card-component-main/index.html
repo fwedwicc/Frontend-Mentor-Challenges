@@ -40,7 +40,7 @@
 </script>
 
 <body class="bg-background font-outfit">
-  <div class="flex justify-center items-center h-screen">
+  <div class="flex flex-col justify-center items-center h-screen">
     <div class="shadow-custom p-6 flex justify-center flex-col max-w-[20rem] w-auto rounded-xl bg-card gap-5">
       <!-- Illustration -->
       <div class="relative flex items-center justify-center cursor-pointer" onmouseover="on()" onmouseout="off()">
@@ -82,7 +82,13 @@
         </span>
       </div>
     </div>
+    <!-- Attribution -->
+    <div class="attribution text-center text-sm mt-8 px-8 text-paragraph">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"class="text-accent hover:underline">Frontend Mentor</a>.
+      Coded by <a href="#" class="text-accent hover:underline">Frederick Moreno</a>.
+    </div>
   </div>
+
   <script>
     const mask = document.getElementById("mask");
     const eye = document.getElementById("eye");
