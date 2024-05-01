@@ -1,22 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FM | Newsletter Sign Up</title>
+</head>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+<!-- Favicon -->
+<link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+<!-- Tailwind Colors -->
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          tomato: "hsl(4, 100%, 67%)", // Accent
+          "dark-slate-grey": "hsl(232, 31%, 20%)", // Button Color
+          "charcoal-grey": "hsl(235, 18%, 26%)", // Background
+          grey: "hsl(231, 7%, 60%)", // Input Outline
+        },
+        boxShadow: {
+          custom: "0px 18px 30px 20px rgba(11,23,42,255)",
+        },
+        fontFamily: {
+          outfit: ["Outfit", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+
+<body class="lg:bg-charcoal-grey bg-white">
+  <div class="flex justify-center items-center h-screen">
+    <div class="bg-white rounded-[2rem] flex items-center justify-between drop-shadow-2xl">
+      <!-- Left Container -->
+      <div class="space-y-4 text-wrap px-[4rem] max-w-[32rem] pb-4">
+        <!-- Title and Description -->
+        <h1 class="font-bold text-[3.5rem] text-charcoal-grey">Stay updated!</h1>
+        <!-- List Container -->
+        <div class="space-y-5">
+          <p class="font-medium text-md text-charcoal-grey">Join 60,000+ product managers receiving monthly updates on:</p>
+          <!-- List -->
+          <ul class="flex flex-col gap-3 font-medium text-md">
+            <li class="inline-flex gap-4 items-center text-charcoal-grey">
+              <img src="./assets/images/icon-list.svg" alt="Icon List">
+              Product discovery and building what matters
+            </li>
+            <li class="inline-flex gap-4 items-center text-charcoal-grey">
+              <img src="./assets/images/icon-list.svg" alt="Icon List">
+              Measuring to ensure updates are a success
+            </li>
+            <li class="inline-flex gap-4 items-center text-charcoal-grey">
+              <img src="./assets/images/icon-list.svg" alt="Icon List">
+              And much more!
+            </li>
+          </ul>
+        </div>
+        <!-- Email Address Inputs -->
+        <form class="space-y-5 pt-4">
+          <div>
+            <label for="" class="block text-xs font-medium mb-2 text-charcoal-grey">Email Address</label>
+            <input type="email" name="" id="" placeholder="email@company.com" class="py-2.5 w-full rounded-lg border-slate-300 focus:ring-1 focus:ring-tomato focus:bg-rose-50 focus:border-tomato focus:outline-none transition duration-300 ease-in-out">
+          </div>
+          <button type="submit" class="py-3 text-sm rounded-lg w-full bg-dark-slate-grey text-white font-medium cursor-pointer">Subscribe to
+            monthly newsletter</button>
+        </form>
+      </div>
+      <!-- Right Container -->
+      <div class="pr-6 py-6">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign Up Illustration" class="">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  displays site properly based on user's device
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  Feel free to remove these styles or customise in your own stylesheet 👍
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Sign-up form start -->
+  Sign-up form start
 
   Stay updated!
 
@@ -31,22 +122,23 @@
 
   Subscribe to monthly newsletter
 
-  <!-- Sign-up form end -->
+  Sign-up form end
 
-  <!-- Success message start -->
+  Success message start
 
   Thanks for subscribing!
 
-  A confirmation email has been sent to ash@loremcompany.com. 
+  A confirmation email has been sent to ash@loremcompany.com.
   Please open it and click the button inside to confirm your subscription.
 
   Dismiss message
 
-  <!-- Success message end -->
-  
+  Success message end
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Frederick Moreno</a>.
   </div>
 </body>
-</html>
+
+</html> -->
